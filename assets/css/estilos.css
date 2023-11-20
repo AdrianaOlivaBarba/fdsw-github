@@ -1,39 +1,80 @@
+/* Utilizamos comillas simples para la familia de fuentes con espacios en el nombre */
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
+  margin: 0; /* Eliminamos el margen predeterminado del cuerpo del documento */
+  padding: 0; /* Eliminamos el relleno predeterminado del cuerpo del documento */
 }
 
-/* Hero Section */
+/* Sección de héroe */
 
 #Hero-Section {
-  background-image: url("../img/bg-hero.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
+  /* Añadimos una altura mínima para asegurar que el contenido sea visible */
+  min-height: 400px;
+  /* Añadimos un degradado de fondo para suavizar la transición de la imagen a un color de fondo */
+  background: linear-gradient(rgba(240, 240, 240, 0.8), rgba(240, 240, 240, 0.8)),
+    url("../img/bg-hero.jpg") no-repeat center/cover;
+  /* Añadimos un espacio adicional alrededor de la sección */
+  padding: 20px;
+  /* Añadimos un borde con un poco de redondez */
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
 
 /* Mis trabajos */
 
+#Mis-trabajos {
+  /* Añadimos un relleno para separar esta sección de las demás */
+  padding: 20px;
+}
+
 #Mis-trabajos .image-top {
-  height: 250px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  /* Añadimos un espacio adicional alrededor de cada imagen */
+  margin: 10px;
+  /* Añadimos una sombra suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Contacto */
 
-#Contacto form label {
-  font-weight: 700;
-  color: #373a3c;
+#Contacto {
+  /* Añadimos un relleno para separar esta sección de las demás */
+  padding: 20px;
 }
 
+#Contacto form {
+  /* Añadimos un margen para separar el formulario de los demás elementos */
+  margin-top: 20px;
+}
+
+#Contacto form label {
+  /* Añadimos un espacio adicional debajo de cada etiqueta */
+  margin-bottom: 8px;
+}
+
+#Contacto form input,
+#Contacto form textarea {
+  /* Hacemos que los campos de entrada ocupen el ancho completo del contenedor */
+  width: 100%;
+  /* Añadimos un espacio adicional alrededor de los campos de entrada */
+  padding: 10px;
+  /* Añadimos un margen inferior para separar los campos de entrada */
+  margin-bottom: 15px;
+  /* Añadimos un borde y una transición suave al pasar el ratón sobre los campos de entrada */
+  border: 1px solid #ddd;
+  transition: border 0.3s ease-in-out;
+}
+
+#Contacto form input:focus,
+#Contacto form textarea:focus {
+  /* Cambiamos el color del borde al recibir el enfoque */
+  border-color: #3498db;
+}
+
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+
 @media (max-width: 768px) {
-  #Contacto form label {
-    font-weight: 400;
+  /* Reducimos el tamaño de la marca de navegación en pantallas más pequeñas */
+  .navbar-brand {
+    width: 60px;
   }
-
-  .navbar-brand{
-    width: 100px;
-  }
-
 }
